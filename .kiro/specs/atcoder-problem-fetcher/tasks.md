@@ -2,14 +2,14 @@
 
 ## Tasks
 
-- [ ] 1. プロジェクト基盤セットアップ
-- [ ] 1.1 Haskell プロジェクト初期化
+- [x] 1. プロジェクト基盤セットアップ
+- [x] 1.1 Haskell プロジェクト初期化
   - Stack または Cabal でプロジェクトを作成
   - 必要な依存パッケージを追加（optparse-applicative, http-conduit, tagsoup, yaml, text, bytestring）
   - ビルド設定を構成（GHC オプション、警告レベル）
   - _Requirements: 1.1, 1.2_
 
-- [ ] 1.2 (P) 共通型と基本エラー型を定義
+- [x] 1.2 (P) 共通型と基本エラー型を定義
   - コマンド型（Fetch、Setup）を定義
   - エラー型（NetworkError、ParseError、FileError）を定義
   - 設定型を定義

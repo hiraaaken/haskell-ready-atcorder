@@ -1,0 +1,28 @@
+# Stack
+.stack-work/
+*.cabal
+stack.yaml.lock
+
+# Haskell
+dist/
+dist-newstyle/
+*.hi
+*.o
+*.dyn_hi
+*.dyn_o
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+.env
+config.yaml
