@@ -1,0 +1,18 @@
+# Stack configuration for atcoder-problem-fetcher
+# Documentation: https://docs.haskellstack.org/en/stable/yaml_configuration/
+
+# LTS 21.25 uses GHC 9.4.8 (AtCoder compatible)
+resolver: lts-21.25
+
+packages:
+- .
+
+# Extra dependencies not in the resolver
+extra-deps:
+  - optparse-applicative-0.19.0.0@sha256:0b47b3ff7eb4a855b5f7d401690365fc62a32057374927ce0d478b620996222d,5813
+
+# Override default flag values for packages
+flags: {}
+
+# Extra package databases (not usually needed)
+extra-package-dbs: []

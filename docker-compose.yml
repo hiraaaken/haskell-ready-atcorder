@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      # Mount source code for live development
+      - .:/app
+      # Persist stack cache for faster rebuilds
+      - stack-root:/root/.stack
+      - stack-work:/app/.stack-work
+    working_dir: /app
+    stdin_open: true
+    tty: true
+    command: /bin/bash
+
+  # Run the CLI tool
+  cli:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+      - stack-root:/root/.stack
+      - stack-work:/app/.stack-work
+    working_dir: /app
+
+  # Run tests
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+      - stack-root:/root/.stack
+      - stack-work:/app/.stack-work
+    working_dir: /app
+    command: stack test
+
+volumes:
+  stack-root:
+  stack-work:

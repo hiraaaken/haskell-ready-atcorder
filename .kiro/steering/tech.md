@@ -20,6 +20,15 @@
 
 ## Development Standards
 
+### Git Workflow
+- **ブランチ命名規則**: 実装前に Issue 番号をつけたブランチを作成
+  - 形式: `feat_{issue番号}` (例: `feat_1`, `feat_2`)
+  - 新機能: `feat_{番号}`
+  - バグ修正: `fix_{番号}`
+  - リファクタリング: `refactor_{番号}`
+- main/master ブランチへの直接コミットは避ける
+- Issue 完了後に PR を作成してマージ
+
 ### Type Safety
 - 明示的な型注釈を推奨
 - `-Wall` 警告を有効化

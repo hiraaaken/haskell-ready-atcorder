@@ -1,0 +1,66 @@
+name:                atcoder-problem-fetcher
+version:             0.1.0.0
+github:              "kenta/haskell-ready-atcorder"
+license:             MIT
+author:              "kenta"
+maintainer:          "kenta@example.com"
+copyright:           "2026 kenta"
+
+extra-source-files:
+- README.md
+
+description:         AtCoder problem fetcher CLI tool for Haskell competitive programming
+
+dependencies:
+- base >= 4.7 && < 5
+- text
+- bytestring
+- optparse-applicative >= 0.18
+- http-conduit >= 2.3
+- tagsoup >= 0.14
+- yaml >= 0.11
+- aeson
+- containers
+- directory
+- filepath
+- mtl
+- transformers
+
+ghc-options:
+- -Wall
+- -Wcompat
+- -Widentities
+- -Wincomplete-record-updates
+- -Wincomplete-uni-patterns
+- -Wmissing-export-lists
+- -Wmissing-home-modules
+- -Wpartial-fields
+- -Wredundant-constraints
+
+library:
+  source-dirs: src
+
+executables:
+  atcoder-problem-fetcher:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - atcoder-problem-fetcher
+
+tests:
+  atcoder-problem-fetcher-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - atcoder-problem-fetcher
+    - hspec >= 2.0
+    - hspec-discover
+    - QuickCheck
